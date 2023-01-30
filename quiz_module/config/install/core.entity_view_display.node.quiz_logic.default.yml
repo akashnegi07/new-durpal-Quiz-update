@@ -1,0 +1,52 @@
+uuid: 7bd3699c-c5c0-4ee8-9d4b-40e0d258d56e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.quiz_logic.field_answer_
+    - field.field.node.quiz_logic.field_answer_four
+    - field.field.node.quiz_logic.field_answer_one
+    - field.field.node.quiz_logic.field_answer_three
+    - node.type.quiz_logic
+  module:
+    - options
+    - user
+id: node.quiz_logic.default
+targetEntityType: node
+bundle: quiz_logic
+mode: default
+content:
+  field_answer_:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_answer_four:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_answer_one:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_answer_three:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,124 @@
+<?php
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\field\Entity\FieldStorageConfig;
+$c=0;
+function quiz_module_1_allowed_values_function(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, $cacheable)  
+{
+    $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');    
+    $ids = $nodeStorage->getQuery()  
+    ->condition('status', 1)  
+    ->condition('type', 'quiz_question')
+    ->sort('field_question_order1', 'ASC') // sorted by time of creation
+    ->execute();
+    $articles = $nodeStorage->loadMultiple($ids);
+    //echo "<pre>";
+   // print_r($articles);
+    //die();
+ 
+    $c=key($articles);
+    $options =[];
+    if(count($articles[$c]->field_answer)>1)
+    {
+    for ($j=0;$j<count($articles[$c]->field_answer);$j++)
+    {
+        $options[$j] = $articles[$c]->field_answer[$j]->value;
+        
+    }
+    }    
+
+    return $options;
+}
+
+function quiz_module_2_allowed_values_function(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, $cacheable)  
+{
+    $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');    
+    $ids = $nodeStorage->getQuery()  
+    ->condition('status', 1)  
+    ->condition('type', 'quiz_question')
+    ->sort('field_question_order1', 'ASC') // sorted by time of creation
+    ->execute();
+    $articles = $nodeStorage->loadMultiple($ids);
+    //echo "<pre>";
+   // print_r($articles);
+    //die();
+ 
+    $c=key($articles);
+    while($articles[$c]->field_question_order1->value != 2)
+    { 
+        $c=next($articles)->nid->value;
+    }
+    
+    
+    $options =[];
+    if(count($articles[$c]->field_answer)>1)
+    {
+    for ($j=0;$j<count($articles[$c]->field_answer);$j++)
+    {
+        $options[$j] = $articles[$c]->field_answer[$j]->value;
+        
+    }
+    }    
+
+    return $options;
+}
+
+function quiz_module_3_allowed_values_function(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, $cacheable)  
+{
+    $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');    
+    $ids = $nodeStorage->getQuery()  
+    ->condition('status', 1)  
+    ->condition('type', 'quiz_question')
+    ->sort('field_question_order1', 'ASC') // sorted by time of creation
+    ->execute();
+    $articles = $nodeStorage->loadMultiple($ids);
+    //echo "<pre>";
+   // print_r($articles);
+    //die();
+ 
+    $c=key($articles);
+    while($articles[$c]->field_question_order1->value != 3)
+    {
+        $c=next($articles)->nid->value;
+    }
+    
+    $options =[];
+    if(count($articles[$c]->field_answer)>1)
+    {
+    for ($j=0;$j<count($articles[$c]->field_answer);$j++)
+    {
+        $options[$j] = $articles[$c]->field_answer[$j]->value;
+        
+    }
+    }    
+
+    return $options;
+}
+
+function quiz_module_4_allowed_values_function(FieldStorageConfig $definition, ContentEntityInterface $entity = NULL, $cacheable)  
+{
+    $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');    
+    $ids = $nodeStorage->getQuery()  
+    ->condition('status', 1)  
+    ->condition('type', 'quiz_question')
+    ->sort('field_question_order1', 'ASC') // sorted by time of creation
+    ->execute();
+    $articles = $nodeStorage->loadMultiple($ids);
+ 
+    $c=key($articles);
+    while($articles[$c]->field_question_order1->value != 4)
+    {
+        $c=next($articles)->nid->value;
+    }
+    
+    $options =[];
+    if(count($articles[$c]->field_answer)>1)
+    {
+    for ($j=0;$j<count($articles[$c]->field_answer);$j++)
+    {
+        $options[$j] = $articles[$c]->field_answer[$j]->value;
+        
+    }
+    }    
+
+    return $options;
+}

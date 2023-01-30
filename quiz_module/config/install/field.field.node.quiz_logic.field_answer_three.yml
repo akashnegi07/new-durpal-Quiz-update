@@ -1,0 +1,21 @@
+uuid: d602e4ce-4bac-4dfe-8d4d-d09593960c25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_answer_three
+    - node.type.quiz_logic
+  module:
+    - options
+id: node.quiz_logic.field_answer_three
+field_name: field_answer_three
+entity_type: node
+bundle: quiz_logic
+label: 'Answer Three'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 4cc805ab-7d34-4b4f-b61a-23e48110d134
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_answer_
+    - node.type.quiz_logic
+  module:
+    - options
+id: node.quiz_logic.field_answer_
+field_name: field_answer_
+entity_type: node
+bundle: quiz_logic
+label: 'Answer two'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

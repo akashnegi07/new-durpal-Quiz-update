@@ -1,0 +1,21 @@
+uuid: ce5e451b-a91f-4b66-a583-0518b042778e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_question
+    - node.type.quiz_question
+  module:
+    - text
+id: node.quiz_question.field_question
+field_name: field_question
+entity_type: node
+bundle: quiz_question
+label: Question
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

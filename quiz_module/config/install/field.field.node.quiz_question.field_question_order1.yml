@@ -1,0 +1,21 @@
+uuid: b929dfb8-304a-41e8-8b8e-0fcd092e886a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_question_order1
+    - node.type.quiz_question
+  module:
+    - text
+id: node.quiz_question.field_question_order1
+field_name: field_question_order1
+entity_type: node
+bundle: quiz_question
+label: 'Question Sequence'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

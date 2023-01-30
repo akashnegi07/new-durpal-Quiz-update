@@ -1,0 +1,21 @@
+uuid: 70c09ce7-23c6-42c7-b928-7598bc2a55e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_answer_
+field_name: field_answer_
+entity_type: node
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: 'quiz_module_2_allowed_values_function'
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

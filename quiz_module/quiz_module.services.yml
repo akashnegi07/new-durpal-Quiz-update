@@ -1,0 +1,4 @@
+services:
+  quiz_module.hello_form_2:
+    class: Drupal\quiz_module\Services\helloform2
+    arguments: ['data']

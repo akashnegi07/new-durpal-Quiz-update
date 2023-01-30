@@ -1,0 +1,28 @@
+uuid: ce91d284-79f3-4354-b967-c49103ee9708
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.quiz_logic.field_answer_
+    - field.field.node.quiz_logic.field_answer_four
+    - field.field.node.quiz_logic.field_answer_one
+    - field.field.node.quiz_logic.field_answer_three
+    - node.type.quiz_logic
+  module:
+    - user
+id: node.quiz_logic.teaser
+targetEntityType: node
+bundle: quiz_logic
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_answer_: true
+  field_answer_four: true
+  field_answer_one: true
+  field_answer_three: true

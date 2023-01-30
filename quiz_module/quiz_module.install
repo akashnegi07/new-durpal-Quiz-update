@@ -1,0 +1,34 @@
+<?php
+/**
+ * To remove all content & content type on uninstallation. 
+ */
+function quiz_module_uninstall() {
+
+    // Delete all nodes of given content type.
+    $storage_handler = \Drupal::entityTypeManager()
+      ->getStorage('node');
+    $nodes = $storage_handler->loadByProperties(['type' => 'quiz_question']);
+    $nodes1 = $storage_handler->loadByProperties(['type' => 'quiz_logic']);
+    if(sizeof($nodes) > 0){
+      $storage_handler->delete($nodes);
+      
+    }
+    if(sizeof($nodes1) > 0){
+        $storage_handler->delete($nodes1);
+    }
+  
+    // Delete content type.
+    $content_type = \Drupal::entityTypeManager()
+      ->getStorage('node_type')
+      ->load('quiz_question');
+    $content_type1 = \Drupal::entityTypeManager()
+      ->getStorage('node_type')
+      ->load('quiz_logic');
+      if($content_type != null){
+          $content_type->delete();
+          
+      }
+      if($content_type1 != null) {
+        $content_type1->delete();
+      }
+  }

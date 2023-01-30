@@ -1,0 +1,11 @@
+quiz_module.simple_form:
+  path: '/simple-form'
+  defaults:
+    _form: 'Drupal\quiz_module\Form\helloform'
+    _title: 'Hello World!'
+  requirements: 
+    _permission: 'access content'
+
+
+
+    

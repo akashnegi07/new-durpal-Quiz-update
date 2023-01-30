@@ -1,0 +1,40 @@
+uuid: 0c0e68b7-3db3-4723-9dd2-9706fecc9862
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.quiz_question.field_answer
+    - field.field.node.quiz_question.field_question
+    - field.field.node.quiz_question.field_question_order1
+    - node.type.quiz_question
+  module:
+    - text
+    - user
+id: node.quiz_question.default
+targetEntityType: node
+bundle: quiz_question
+mode: default
+content:
+  field_answer:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_question:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_question_order1:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  links: true

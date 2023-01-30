@@ -1,0 +1,20 @@
+uuid: 0eae1720-c996-4ff2-9955-74200ae66aa9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_question_order1
+field_name: field_question_order1
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
